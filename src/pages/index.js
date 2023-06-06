@@ -4,9 +4,7 @@ import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 
 import dynamic from "next/dynamic";
-const DynamicHeader = dynamic(() => import("./Charts/Map"), {
-  ssr: false,
-});
+
 const Test = dynamic(() => import("./Charts/test"), {
   ssr: false,
 });
