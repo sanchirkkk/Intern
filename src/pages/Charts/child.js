@@ -29,5 +29,3 @@ let data = {
     { name: "Бизнес орлогыг цэвэршүүлэх", value: 50 },
   ],
 };
-
-export default data;

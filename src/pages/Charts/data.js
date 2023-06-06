@@ -54,5 +54,3 @@ const tetrisShapes = [
     "Эрсдэлтэй зээлийн дохио",
   ],
 ];
-
-export default tetrisShapes;
