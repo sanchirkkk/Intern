@@ -1,0 +1,58 @@
+const tetrisShapes = [
+  [
+    "Customer Segmentation",
+    "",
+    "Credit Default Projection",
+    "Сэжигтэй гүйлгээний дохио",
+    "Early Warning System",
+    "Зээлийн эрсдлийн сан",
+    "Business Income Model",
+  ],
+  [
+    "",
+    "Customer Tag",
+    "Insurance Recommendation Model",
+    "Early Warning System",
+    "",
+    "NPL Chatbot",
+    "Debt Collection Model",
+  ],
+  [
+    "Salary Loan Sales Model",
+    "",
+    "Debt Collection System",
+    "",
+    "Early Warning Model",
+    "Salary Loan Sales Model",
+    "Early Warning Model",
+  ],
+  [
+    "Credit Card Sales Model",
+    "",
+    "Risk Management System",
+    "Business Industry Model",
+    "Customer Churning Model",
+    "Credit Card Sales Model",
+    "Customer Churning Model",
+  ],
+  [
+    "",
+    "NLP Chatbot",
+    "Customer 360",
+    "",
+    "Customer Segmentation Model",
+    "Insurance Recommendation Model",
+    "Credit Default Projection",
+  ],
+  [
+    "MLOps",
+    "Bank Wide Loyalty",
+    "Business Income Model",
+    "Зээлийн эрсдлийн сан",
+    "Депозитийн гарах урсгалын судалгаа",
+    "Сэжигтэй гүйлгээний дохио",
+    "Эрсдэлтэй зээлийн дохио",
+  ],
+];
+
+export default tetrisShapes;
