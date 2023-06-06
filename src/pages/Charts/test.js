@@ -20,7 +20,7 @@ function App() {
       "Insurance Recommendation Model",
       "Early Warning System",
       "",
-      "NPL Chatbot",
+      "NLP Chatbot",
       "Debt Collection Model",
     ],
     [
@@ -152,7 +152,7 @@ function App() {
                     : {}
                 }
               >
-                Систем <br /> хөгжүүлэлт
+                Технологи
               </p>
             ) : (
               ""
