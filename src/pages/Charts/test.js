@@ -349,7 +349,7 @@ function App() {
             height: windowSize.height / 14,
           }}
         >
-          <span> {item["name"]}</span>
+          <Text fontSize="md"> {item["name"]}</Text>
         </div>
       );
     });
