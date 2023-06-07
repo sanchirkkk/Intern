@@ -426,7 +426,7 @@ function App() {
     <div
       id="chartdiv"
       className={styles.bigcon}
-      style={{ width: "100%", height: "100%" }}
+      style={{ width: windowSize.width, height: windowSize.height }}
     >
       <IconButton
         icon={<HamburgerIcon />}
@@ -437,10 +437,6 @@ function App() {
       >
         Харуулах
       </IconButton>
-
-      {/* <button onClick={handleClick1} size="lg">
-        {showall ? "Хаах" : "Бүгдийг харуулах "}
-      </button> */}
 
       <div
         style={{ width: windowSize.width * 0.9, height: windowSize.height }}
