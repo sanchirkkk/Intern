@@ -1,12 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import {
   HamburgerIcon,
   CheckCircleIcon,
   TimeIcon,
+  RepeatClockIcon,
+  ViewIcon,
   RepeatIcon,
 } from "@chakra-ui/icons";
 import {
   Menu,
+  Stack,
+  Box,
   MenuButton,
   MenuList,
   IconButton,
@@ -16,6 +20,15 @@ import {
   MenuOptionGroup,
   MenuDivider,
   flexbox,
+} from "@chakra-ui/react";
+import {
+  Drawer,
+  DrawerBody,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
 } from "@chakra-ui/react";
 // import incomedata from "./data";
 
@@ -98,6 +111,7 @@ function App() {
     styles.tetrisShape6,
     styles.tetrisShape7,
   ]);
+  const btnRef = useRef();
 
   const categorydata = [
     { color: "#9ACCE3", value: 1, name: "Customer Valuation" },
@@ -115,6 +129,8 @@ function App() {
     { color: "#042A37", value: 13, name: "Process automation" },
     { color: "#021916", value: 14, name: "Sales" },
   ];
+  const [isOpen, setOpen] = useState(false);
+
   const tetrisShapes = [
     [0, 0, 1, 2, 2, 3, 4, 4],
     [0, 1, 1, 2, 3, 3, 4, 4],
@@ -363,25 +379,24 @@ function App() {
     setIsClicked(!isClicked);
   };
   const handleClick1 = () => {
-    let check = !showall;
-    if (!check) {
-      setLastClicked("null");
-      let data = [
-        "tetrisShape1",
-        "tetrisShape2",
-        "tetrisShape3",
-        "tetrisShape4",
-        "tetrisShape5",
-        "tetrisShape6",
-        "tetrisShape7",
-      ];
-      let updatedData = data.map((item) => {
-        return styles[item];
-      });
-      setcontainerClassNames(updatedData);
-    }
-    setShowall(check);
+    setLastClicked("null");
+    let data = [
+      "tetrisShape1",
+      "tetrisShape2",
+      "tetrisShape3",
+      "tetrisShape4",
+      "tetrisShape5",
+      "tetrisShape6",
+      "tetrisShape7",
+    ];
+    let updatedData = data.map((item) => {
+      return styles[item];
+    });
+    setcontainerClassNames(updatedData);
+
+    setShowall(false);
     setselectedvalue(99);
+    onCloseD();
   };
   const svalue = (number) => {
     console.log(number);
@@ -395,32 +410,33 @@ function App() {
     setselectedvalue(number);
   };
 
+  const showaall = () => {
+    setShowall(true);
+    setselectedvalue(99);
+    onCloseD();
+  };
+
+  const onCloseD = () => {
+    setOpen(false);
+  };
+  const onOpen = () => {
+    setOpen(true);
+  };
   return (
     <div
       id="chartdiv"
       className={styles.bigcon}
       style={{ width: "100%", height: "100%" }}
     >
-      <Menu>
-        <MenuButton
-          as={IconButton}
-          aria-label="Options"
-          icon={<HamburgerIcon />}
-          // variant="outline"
-          position="absolute"
-          className={styles.btnn}
-        >
-          Харуулах
-        </MenuButton>
-        <MenuList>
-          <MenuItem
-            icon={<CheckCircleIcon color={"green"} />}
-            onClick={handleClick1}
-          >
-            {showall ? "Бүгдийг хаах" : "Бүгдийг харах "}
-          </MenuItem>
-        </MenuList>
-      </Menu>
+      <IconButton
+        icon={<HamburgerIcon />}
+        // variant="outline"
+        position="absolute"
+        onClick={onOpen}
+        className={styles.btnn}
+      >
+        Харуулах
+      </IconButton>
 
       {/* <button onClick={handleClick1} size="lg">
         {showall ? "Хаах" : "Бүгдийг харуулах "}
@@ -438,6 +454,51 @@ function App() {
       >
         {generateButton()}
       </div>
+
+      <Drawer
+        isOpen={isOpen}
+        placement="left"
+        onClose={onCloseD}
+        finalFocusRef={btnRef}
+      >
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerCloseButton />
+          <DrawerHeader>Цэс</DrawerHeader>
+
+          <DrawerBody>
+            <Stack spacing={4}>
+              <Button
+                leftIcon={<ViewIcon />}
+                onClick={showaall}
+                size="md"
+                width="100%"
+                colorScheme="green"
+                variant="solid"
+              >
+                Бүгдийг харуулах
+              </Button>
+              <Button
+                leftIcon={<RepeatIcon />}
+                onClick={handleClick1}
+                size="md"
+                width="100%"
+                colorScheme="pink"
+                variant="solid"
+              >
+                Бүх сонголтыг арилгах
+              </Button>
+            </Stack>
+          </DrawerBody>
+
+          <DrawerFooter>
+            <Button variant="outline" mr={3} onClick={onCloseD}>
+              Болих
+            </Button>
+            <Button colorScheme="blue">Оруулах</Button>
+          </DrawerFooter>
+        </DrawerContent>
+      </Drawer>
     </div>
   );
 }
