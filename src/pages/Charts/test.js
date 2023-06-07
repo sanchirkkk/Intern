@@ -10,6 +10,7 @@ import {
 import {
   Menu,
   Stack,
+  Text,
   Box,
   MenuButton,
   MenuList,
@@ -183,23 +184,24 @@ function App() {
                   ? {
                       "box-shadow":
                         "rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px",
-                      width: (windowSize.width * 0.9) / 8,
+                      width: (windowSize.width * 0.85) / 8,
                       height: windowSize.height / 6,
                     }
                   : {
-                      width: (windowSize.width * 0.9) / 8,
+                      width: (windowSize.width * 0.85) / 8,
                       height: windowSize.height / 6,
                       filter: "brightness(40%)",
                     }
                 : {
-                    width: (windowSize.width * 0.9) / 8,
+                    width: (windowSize.width * 0.85) / 8,
                     height: windowSize.height / 6,
                   }
             }
             onClick={handleClick}
           >
             {el == 0 && el1 == 0 ? (
-              <p
+              <Text
+                fontSize="2xl"
                 className={styles.texttitle}
                 style={
                   showall || lastClicked === "tetrisShape1"
@@ -210,12 +212,13 @@ function App() {
                 }
               >
                 CARD
-              </p>
+              </Text>
             ) : (
               ""
             )}
             {el == 1 && el1 == 2 ? (
-              <p
+              <Text
+                fontSize="2xl"
                 className={styles.texttitle}
                 style={
                   showall || lastClicked == "tetrisShape2"
@@ -227,12 +230,13 @@ function App() {
               >
                 {"Macro".toLocaleUpperCase()} <br />
                 {"Economics".toLocaleUpperCase()}
-              </p>
+              </Text>
             ) : (
               ""
             )}
             {el == 3 && el1 == 2 ? (
-              <p
+              <Text
+                fontSize="2xl"
                 className={styles.texttitle}
                 style={
                   showall || lastClicked == "tetrisShape3"
@@ -243,12 +247,13 @@ function App() {
                 }
               >
                 LOAN
-              </p>
+              </Text>
             ) : (
               ""
             )}
             {el == 4 && el1 == 7 ? (
-              <p
+              <Text
+                fontSize="2xl"
                 className={styles.texttitle}
                 style={
                   showall || lastClicked == "tetrisShape7"
@@ -259,12 +264,13 @@ function App() {
                 }
               >
                 RISK
-              </p>
+              </Text>
             ) : (
               ""
             )}
             {el == 5 && el1 == 1 ? (
-              <p
+              <Text
+                fontSize="2xl"
                 className={styles.texttitle}
                 style={
                   showall || lastClicked == "tetrisShape4"
@@ -277,12 +283,13 @@ function App() {
                 BANK <br />
                 FOCUSED <br />
                 BUSINESS
-              </p>
+              </Text>
             ) : (
               ""
             )}
             {el == 5 && el1 == 6 ? (
-              <p
+              <Text
+                fontSize="2xl"
                 className={styles.texttitle}
                 style={
                   showall || lastClicked == "tetrisShape6"
@@ -293,12 +300,13 @@ function App() {
                 }
               >
                 Operation
-              </p>
+              </Text>
             ) : (
               ""
             )}
             {el == 3 && el1 == 5 ? (
-              <p
+              <Text
+                fontSize="2xl"
                 className={styles.texttitle}
                 style={
                   showall || lastClicked == "tetrisShape5"
@@ -310,17 +318,18 @@ function App() {
               >
                 {" "}
                 CUSTOMER <br /> FOCUSED <br /> BUSINESS
-              </p>
+              </Text>
             ) : (
               ""
             )}
 
-            <span
-              id={containerClassNames1[tetrisShapes[el][el1]]}
+            <Text
               style={showall ? { color: "white" } : {}}
+              id={containerClassNames1[tetrisShapes[el][el1]]}
+              fontSize="sm"
             >
               {bigdata[el][el1]["name"]}
-            </span>
+            </Text>
           </div>
         );
       });
@@ -439,14 +448,14 @@ function App() {
       </IconButton>
 
       <div
-        style={{ width: windowSize.width * 0.9, height: windowSize.height }}
+        style={{ width: windowSize.width * 0.85, height: windowSize.height }}
         className={styles.container}
       >
         {generateElements()}
       </div>
       <div
         className={styles.categorys}
-        style={{ width: windowSize.width * 0.1, height: windowSize.height }}
+        style={{ width: windowSize.width * 0.15, height: windowSize.height }}
       >
         {generateButton()}
       </div>
