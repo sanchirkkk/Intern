@@ -15,6 +15,7 @@ import {
   MenuGroup,
   MenuOptionGroup,
   MenuDivider,
+  flexbox,
 } from "@chakra-ui/react";
 // import incomedata from "./data";
 
@@ -23,68 +24,71 @@ import { Button, Show } from "@chakra-ui/react";
 function App() {
   const [bigdata, setbigdata] = useState([
     [
-      { name: "Customer Segmentation", value: 0 },
-      { name: "", value: 4 },
-      { name: "Credit Default Projection", value: 1 },
-      { name: "Сэжигтэй гүйлгээний дохио", value: 2 },
-      { name: "Early Warning System", value: 1 },
-      { name: "Зээлийн эрсдлийн сан", value: 2 },
-      { name: "Business Income Model", value: 1 },
+      { name: "", value: [] },
+      { name: "Credit Card Recommendation", value: [2, 4, 8, 14] },
+      { name: "Currency Prediction", value: [3, 6, 10, 13] },
+      { name: "Behavioral Scoring", value: [1, 4, 7, 12] },
+      { name: "Collateral Valuation", value: [1, 6, 8, 12] },
+      { name: "Potential New-Adult Customer", value: [3, 6, 7, 14] },
+      { name: "Cashflow Prediction", value: [1, 6, 8, 13] },
+      { name: "Personalized Product", value: [2, 6, 9, 11] },
     ],
     [
-      { name: "", value: 1 },
-      { name: "Customer Tag", value: 2 },
-      { name: "Insurance Recommendation Model", value: 0 },
-      { name: "Early Warning System", value: 1 },
-      { name: "", value: 4 },
-      { name: "NLP Chatbot", value: 1 },
-      { name: "Debt Collection Model", value: 1 },
-    ],
-
-    [
-      { name: "Salary Loan Sales Model", value: 2 },
-      { name: "", value: 2 },
-      { name: "Debt Collection System", value: 3 },
-      { name: "", value: 0 },
-      { name: "Early Warning Model", value: 1 },
-      { name: "Salary Loan Sales Model", value: 1 },
-      { name: "Early Warning Model", value: 2 },
-    ],
-
-    [
-      { name: "Credit Card Sales Model", value: 1 },
-      { name: "", value: 0 },
-      { name: "Risk Management System", value: 1 },
-      { name: "Business Industry Model", value: 2 },
-      { name: "Customer Churning Model", value: 1 },
-      { name: "Credit Card Sales Model", value: 2 },
-      { name: "Customer Churning Model", value: 1 },
-    ],
-
-    [
-      { name: "", value: 1 },
-      { name: "NLP Chatbot", value: 1 },
-      { name: "Customer 360", value: 1 },
-      { name: "", value: 1 },
-      { name: "Customer Segmentation Model", value: 2 },
-      { name: "Insurance Recommendation Model", value: 3 },
-      { name: "Credit Default Projection", value: 0 },
+      { name: "Credit Card Segmentation", value: [3, 4, 8, 14] },
+      { name: "", value: [] },
+      { name: "Interest Rate Prediction", value: [3, 6, 10, 13] },
+      { name: "Debt Collection", value: [1, 4, 8, 12] },
+      { name: "Potential Priority Customer", value: [3, 6, 7, 14] },
+      { name: "Business Industry", value: [1, 4, 7, 14] },
+      { name: "Savings Recommendation", value: [2, 6, 8, 14] },
+      { name: "", value: [] },
     ],
     [
-      { name: "MLOps", value: 1 },
-      { name: "Bank Wide Loyalty", value: 1 },
-      { name: "Business Income Model", value: 0 },
-      { name: "Зээлийн эрсдлийн сан", value: 0 },
-      { name: "Депозитийн гарах урсгалын судалгаа", value: 2 },
-      { name: "Сэжигтэй гүйлгээний дохио", value: 2 },
-      { name: "Эрсдэлтэй зээлийн дохио", value: 2 },
+      { name: "Portfolio Optimization", value: [3, 6, 10, 13] },
+      { name: "Industry Growth", value: [3, 6, 10, 13] },
+      { name: "", value: [] },
+      { name: "Early Warning", value: [1, 5, 8, 12] },
+      { name: "", value: [] },
+      { name: "Personal Spending", value: [2, 6, 8, 11] },
+      { name: "Voice Recognized Transaction", value: [2, 6, 8, 11] },
+      { name: "Customer Churning", value: [1, 5, 9, 12] },
+    ],
+    [
+      { name: "", value: [] },
+      { name: "Loan Segmentation", value: [3, 6, 10, 12] },
+      { name: "Loan Portfolio Optimization", value: [3, 6, 10, 12] },
+      { name: "", value: [] },
+      { name: "Customer Segmentation", value: [3, 5, 8, 14] },
+      { name: "", value: [] },
+      { name: "Signature Verification", value: [3, 6, 10, 13] },
+      { name: "Fraud Detection", value: [3, 6, 7, 12] },
+    ],
+    [
+      { name: "Salary Loan Recommendation", value: [2, 4, 8, 14] },
+      { name: "Business Lookalike", value: [1, 4, 7, 14] },
+      { name: "Customer Behavior", value: [1, 6, 7, 11] },
+      { name: "Customer Behavior Forecasting", value: [1, 6, 7, 11] },
+      { name: "Anomaly Detection", value: [2, 6, 9, 11] },
+      { name: "Customer Sentiment Analysis", value: [2, 6, 9, 11] },
+      { name: "", value: [] },
+      { name: "Risk Adjusted Rate", value: [2, 6, 8, 11] },
+    ],
+    [
+      { name: "Business Income", value: [1, 5, 7, 14] },
+      { name: "", value: [] },
+      { name: "", value: [] },
+      { name: "Insurance Recommendation", value: [2, 4, 8, 14] },
+      { name: "Bank Wide Loyalty", value: [2, 5, 9, 11] },
+      { name: "Document Verification", value: [3, 6, 10, 13] },
+      { name: "NLP Chatbot", value: [2, 5, 8, 11] },
+      { name: "", value: [] },
     ],
   ]);
   const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
   const [isClicked, setIsClicked] = useState(false);
   const [lastClicked, setLastClicked] = useState("none");
   const [showall, setShowall] = useState(false);
-  const [valueselected, setselectedvalue] = useState(10);
+  const [valueselected, setselectedvalue] = useState(99);
   const [containerClassNames, setcontainerClassNames] = useState([
     styles.tetrisShape1,
     styles.tetrisShape2,
@@ -94,13 +98,30 @@ function App() {
     styles.tetrisShape6,
     styles.tetrisShape7,
   ]);
+
+  const categorydata = [
+    { color: "#9ACCE3", value: 1, name: "Customer Valuation" },
+    { color: "#86C0DF", value: 2, name: "Customer Support" },
+    { color: "#72B3DB", value: 3, name: "Business Support" },
+    { color: "#5EABD8", value: 4, name: "Completed" },
+    { color: "#4A9ED4", value: 5, name: "Ongoing" },
+    { color: "#3691D0", value: 6, name: "Planned" },
+    { color: "#2283CC", value: 7, name: "Identify" },
+    { color: "#1077C9", value: 8, name: "Cooperate" },
+    { color: "#0D6AB2", value: 9, name: "Retain" },
+    { color: "#0A5C9C", value: 10, name: "Non-Customer" },
+    { color: "#084B7A", value: 11, name: "Customer experience" },
+    { color: "#063B58", value: 12, name: "Risk" },
+    { color: "#042A37", value: 13, name: "Process automation" },
+    { color: "#021916", value: 14, name: "Sales" },
+  ];
   const tetrisShapes = [
-    [0, 0, 4, 4, 4, 4, 6],
-    [0, 0, 0, 1, 4, 6, 6],
-    [0, 0, 1, 1, 4, 6, 6],
-    [0, 1, 1, 2, 2, 6, 6],
-    [1, 1, 2, 2, 6, 6, 5],
-    [1, 2, 2, 5, 5, 5, 5],
+    [0, 0, 1, 2, 2, 3, 4, 4],
+    [0, 1, 1, 2, 3, 3, 4, 4],
+    [1, 1, 2, 2, 3, 4, 4, 6],
+    [2, 2, 2, 3, 3, 4, 5, 6],
+    [2, 3, 3, 3, 4, 4, 5, 6],
+    [3, 3, 3, 4, 4, 5, 5, 6],
   ];
 
   const containerClassNames1 = [
@@ -126,7 +147,7 @@ function App() {
 
   const generateElements = () => {
     return Array.from({ length: 6 }).map((item, el) => {
-      return Array.from({ length: 7 }).map((item1, el1) => {
+      return Array.from({ length: 8 }).map((item1, el1) => {
         let containerClassName = containerClassNames[tetrisShapes[el][el1]];
 
         return (
@@ -141,24 +162,27 @@ function App() {
                 : ""
             }`}
             style={
-              valueselected != 10
-                ? bigdata[el][el1]["value"] == valueselected
+              valueselected != 99
+                ? bigdata[el][el1]["value"].includes(valueselected)
                   ? {
                       "box-shadow":
                         "rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px",
-                      width: windowSize.width / 7,
+                      width: (windowSize.width * 0.9) / 8,
                       height: windowSize.height / 6,
                     }
                   : {
-                      width: windowSize.width / 7,
+                      width: (windowSize.width * 0.9) / 8,
                       height: windowSize.height / 6,
                       filter: "brightness(40%)",
                     }
-                : { width: windowSize.width / 7, height: windowSize.height / 6 }
+                : {
+                    width: (windowSize.width * 0.9) / 8,
+                    height: windowSize.height / 6,
+                  }
             }
             onClick={handleClick}
           >
-            {el == 1 && el1 == 1 ? (
+            {el == 0 && el1 == 0 ? (
               <p
                 className={styles.texttitle}
                 style={
@@ -169,12 +193,12 @@ function App() {
                     : {}
                 }
               >
-                Борлуулалт
+                CARD
               </p>
             ) : (
               ""
             )}
-            {el == 3 && el1 == 2 ? (
+            {el == 1 && el1 == 2 ? (
               <p
                 className={styles.texttitle}
                 style={
@@ -185,13 +209,13 @@ function App() {
                     : {}
                 }
               >
-                Технологи
+                {"Macro".toLocaleUpperCase()} <br />
+                {"Economics".toLocaleUpperCase()}
               </p>
             ) : (
               ""
             )}
-
-            {el == 4 && el1 == 3 ? (
+            {el == 3 && el1 == 2 ? (
               <p
                 className={styles.texttitle}
                 style={
@@ -202,28 +226,12 @@ function App() {
                     : {}
                 }
               >
-                Харилцагчийн <br /> судалгаа
+                LOAN
               </p>
             ) : (
               ""
             )}
-            {el == 5 && el1 == 4 ? (
-              <p
-                className={styles.texttitle}
-                style={
-                  showall || lastClicked == "tetrisShape6"
-                    ? {
-                        opacity: 0,
-                      }
-                    : {}
-                }
-              >
-                Өгөгдлийн шинжилгээ
-              </p>
-            ) : (
-              ""
-            )}
-            {el == 2 && el1 == 6 ? (
+            {el == 4 && el1 == 7 ? (
               <p
                 className={styles.texttitle}
                 style={
@@ -234,13 +242,46 @@ function App() {
                     : {}
                 }
               >
-                Машин сургалтын загвар
+                RISK
               </p>
             ) : (
               ""
             )}
-
-            {el == 0 && el1 == 3 ? (
+            {el == 5 && el1 == 1 ? (
+              <p
+                className={styles.texttitle}
+                style={
+                  showall || lastClicked == "tetrisShape4"
+                    ? {
+                        opacity: 0,
+                      }
+                    : {}
+                }
+              >
+                BANK <br />
+                FOCUSED <br />
+                BUSINESS
+              </p>
+            ) : (
+              ""
+            )}
+            {el == 5 && el1 == 6 ? (
+              <p
+                className={styles.texttitle}
+                style={
+                  showall || lastClicked == "tetrisShape6"
+                    ? {
+                        opacity: 0,
+                      }
+                    : {}
+                }
+              >
+                Operation
+              </p>
+            ) : (
+              ""
+            )}
+            {el == 3 && el1 == 5 ? (
               <p
                 className={styles.texttitle}
                 style={
@@ -251,7 +292,8 @@ function App() {
                     : {}
                 }
               >
-                Эрсдэл
+                {" "}
+                CUSTOMER <br /> FOCUSED <br /> BUSINESS
               </p>
             ) : (
               ""
@@ -266,6 +308,25 @@ function App() {
           </div>
         );
       });
+    });
+  };
+
+  const generateButton = () => {
+    return categorydata.map((item, index) => {
+      return (
+        <div
+          onClick={() => svalue(item["value"])}
+          className={styles.smallcon}
+          style={{
+            backgroundColor: item["color"],
+            color: "white",
+            width: "100%",
+            height: windowSize.height / 14,
+          }}
+        >
+          <span> {item["name"]}</span>
+        </div>
+      );
     });
   };
 
@@ -320,12 +381,12 @@ function App() {
       setcontainerClassNames(updatedData);
     }
     setShowall(check);
-    setselectedvalue(10);
+    setselectedvalue(99);
   };
   const svalue = (number) => {
     console.log(number);
     if (valueselected == number) {
-      setselectedvalue(10);
+      setselectedvalue(99);
       console.log("end orloo");
       setShowall(false);
       return;
@@ -337,7 +398,7 @@ function App() {
   return (
     <div
       id="chartdiv"
-      className={styles.container}
+      className={styles.bigcon}
       style={{ width: "100%", height: "100%" }}
     >
       <Menu>
@@ -352,26 +413,11 @@ function App() {
           Харуулах
         </MenuButton>
         <MenuList>
-          <MenuItem onClick={handleClick1}>
-            {showall ? "Бүгдийг хаах" : "Бүгдийг харах "}
-          </MenuItem>
           <MenuItem
-            onClick={() => svalue(0)}
             icon={<CheckCircleIcon color={"green"} />}
+            onClick={handleClick1}
           >
-            Хийгдсэн
-          </MenuItem>
-          <MenuItem
-            onClick={() => svalue(1)}
-            icon={<RepeatIcon color={"pink.600"} />}
-          >
-            Хийгдэж буй
-          </MenuItem>
-          <MenuItem
-            onClick={() => svalue(2)}
-            icon={<TimeIcon color={"blue"} />}
-          >
-            Төлөвлөж буй
+            {showall ? "Бүгдийг хаах" : "Бүгдийг харах "}
           </MenuItem>
         </MenuList>
       </Menu>
@@ -379,7 +425,19 @@ function App() {
       {/* <button onClick={handleClick1} size="lg">
         {showall ? "Хаах" : "Бүгдийг харуулах "}
       </button> */}
-      {generateElements()}
+
+      <div
+        style={{ width: "90%", height: "100%" }}
+        className={styles.container}
+      >
+        {generateElements()}
+      </div>
+      <div
+        className={styles.categorys}
+        style={{ width: "10%", height: windowSize.height }}
+      >
+        {generateButton()}
+      </div>
     </div>
   );
 }
