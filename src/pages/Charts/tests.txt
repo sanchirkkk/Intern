@@ -1,0 +1,57 @@
+ [
+    {"name": "Customer Segmentation", "value": 0},
+    {"name": "", "value": 4},
+    {"name": "Credit Default Projection", "value": 1},
+    {"name": "Сэжигтэй гүйлгээний дохио", "value": 2},
+    {"name": "Early Warning System", "value": 1},
+    {"name": "Зээлийн эрсдлийн сан", "value": 2},
+    {"name": "Business Income Model", "value": 1}
+]
+[
+    {"name": "", "value": 0},
+    {"name": "Customer Tag", "value": 0},
+    {"name": "Insurance Recommendation Model", "value": 0},
+    {"name": "Early Warning System", "value": 0},
+    {"name": "", "value": 0},
+    {"name": "NLP Chatbot", "value": 0},
+    {"name": "Debt Collection Model", "value": 0}
+]
+
+ [
+    {"name": "Salary Loan Sales Model", "value": 0},
+    {"name": "", "value": 0},
+    {"name": "Debt Collection System", "value": 0},
+    {"name": "", "value": 0},
+    {"name": "Early Warning Model", "value": 0},
+    {"name": "Salary Loan Sales Model", "value": 0},
+    {"name": "Early Warning Model", "value": 0}
+]
+
+ [
+    {"name": "Credit Card Sales Model", "value": 0},
+    {"name": "", "value": 0},
+    {"name": "Risk Management System", "value": 0},
+    {"name": "Business Industry Model", "value": 0},
+    {"name": "Customer Churning Model", "value": 0},
+    {"name": "Credit Card Sales Model", "value": 0},
+    {"name": "Customer Churning Model", "value": 0}
+]
+
+[
+    {"name": "", "value": 0},
+    {"name": "NLP Chatbot", "value": 0},
+    {"name": "Customer 360", "value": 0},
+    {"name": "", "value": 0},
+    {"name": "Customer Segmentation Model", "value": 0},
+    {"name": "Insurance Recommendation Model", "value": 0},
+    {"name": "Credit Default Projection", "value": 0}
+]
+[
+    {"name": "MLOps", "value": 0},
+    {"name": "Bank Wide Loyalty", "value": 0},
+    {"name": "Business Income Model", "value": 0},
+    {"name": "Зээлийн эрсдлийн сан", "value": 0},
+    {"name": "Депозитийн гарах урсгалын судалгаа", "value": 0},
+    {"name": "Сэжигтэй гүйлгээний дохио", "value": 0},
+    {"name": "Эрсдэлтэй зээлийн дохио", "value": 0}
+]

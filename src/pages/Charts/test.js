@@ -1,4 +1,21 @@
 import React, { useEffect, useState } from "react";
+import {
+  HamburgerIcon,
+  CheckCircleIcon,
+  TimeIcon,
+  RepeatIcon,
+} from "@chakra-ui/icons";
+import {
+  Menu,
+  MenuButton,
+  MenuList,
+  IconButton,
+  MenuItem,
+  MenuItemOption,
+  MenuGroup,
+  MenuOptionGroup,
+  MenuDivider,
+} from "@chakra-ui/react";
 // import incomedata from "./data";
 
 import styles from "@/styles/Home.module.css";
@@ -6,64 +23,68 @@ import { Button, Show } from "@chakra-ui/react";
 function App() {
   const [bigdata, setbigdata] = useState([
     [
-      "Customer Segmentation",
-      "",
-      "Credit Default Projection",
-      "Сэжигтэй гүйлгээний дохио",
-      "Early Warning System",
-      "Зээлийн эрсдлийн сан",
-      "Business Income Model",
+      { name: "Customer Segmentation", value: 0 },
+      { name: "", value: 4 },
+      { name: "Credit Default Projection", value: 1 },
+      { name: "Сэжигтэй гүйлгээний дохио", value: 2 },
+      { name: "Early Warning System", value: 1 },
+      { name: "Зээлийн эрсдлийн сан", value: 2 },
+      { name: "Business Income Model", value: 1 },
     ],
     [
-      "",
-      "Customer Tag",
-      "Insurance Recommendation Model",
-      "Early Warning System",
-      "",
-      "NLP Chatbot",
-      "Debt Collection Model",
+      { name: "", value: 1 },
+      { name: "Customer Tag", value: 2 },
+      { name: "Insurance Recommendation Model", value: 0 },
+      { name: "Early Warning System", value: 1 },
+      { name: "", value: 4 },
+      { name: "NLP Chatbot", value: 1 },
+      { name: "Debt Collection Model", value: 1 },
+    ],
+
+    [
+      { name: "Salary Loan Sales Model", value: 2 },
+      { name: "", value: 2 },
+      { name: "Debt Collection System", value: 3 },
+      { name: "", value: 0 },
+      { name: "Early Warning Model", value: 1 },
+      { name: "Salary Loan Sales Model", value: 1 },
+      { name: "Early Warning Model", value: 2 },
+    ],
+
+    [
+      { name: "Credit Card Sales Model", value: 1 },
+      { name: "", value: 0 },
+      { name: "Risk Management System", value: 1 },
+      { name: "Business Industry Model", value: 2 },
+      { name: "Customer Churning Model", value: 1 },
+      { name: "Credit Card Sales Model", value: 2 },
+      { name: "Customer Churning Model", value: 1 },
+    ],
+
+    [
+      { name: "", value: 1 },
+      { name: "NLP Chatbot", value: 1 },
+      { name: "Customer 360", value: 1 },
+      { name: "", value: 1 },
+      { name: "Customer Segmentation Model", value: 2 },
+      { name: "Insurance Recommendation Model", value: 3 },
+      { name: "Credit Default Projection", value: 0 },
     ],
     [
-      "Salary Loan Sales Model",
-      "",
-      "Debt Collection System",
-      "",
-      "Early Warning Model",
-      "Salary Loan Sales Model",
-      "Early Warning Model",
-    ],
-    [
-      "Credit Card Sales Model",
-      "",
-      "Risk Management System",
-      "Business Industry Model",
-      "Customer Churning Model",
-      "Credit Card Sales Model",
-      "Customer Churning Model",
-    ],
-    [
-      "",
-      "NLP Chatbot",
-      "Customer 360",
-      "",
-      "Customer Segmentation Model",
-      "Insurance Recommendation Model",
-      "Credit Default Projection",
-    ],
-    [
-      "MLOps",
-      "Bank Wide Loyalty",
-      "Business Income Model",
-      "Зээлийн эрсдлийн сан",
-      "Депозитийн гарах урсгалын судалгаа",
-      "Сэжигтэй гүйлгээний дохио",
-      "Эрсдэлтэй зээлийн дохио",
+      { name: "MLOps", value: 1 },
+      { name: "Bank Wide Loyalty", value: 1 },
+      { name: "Business Income Model", value: 0 },
+      { name: "Зээлийн эрсдлийн сан", value: 0 },
+      { name: "Депозитийн гарах урсгалын судалгаа", value: 2 },
+      { name: "Сэжигтэй гүйлгээний дохио", value: 2 },
+      { name: "Эрсдэлтэй зээлийн дохио", value: 2 },
     ],
   ]);
   const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
   const [isClicked, setIsClicked] = useState(false);
   const [lastClicked, setLastClicked] = useState("none");
   const [showall, setShowall] = useState(false);
+  const [valueselected, setselectedvalue] = useState(10);
   const [containerClassNames, setcontainerClassNames] = useState([
     styles.tetrisShape1,
     styles.tetrisShape2,
@@ -119,10 +140,22 @@ function App() {
                 ? styles.active
                 : ""
             }`}
-            style={{
-              width: windowSize.width / 7,
-              height: windowSize.height / 6,
-            }}
+            style={
+              valueselected != 10
+                ? bigdata[el][el1]["value"] == valueselected
+                  ? {
+                      "box-shadow":
+                        "rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px",
+                      width: windowSize.width / 7,
+                      height: windowSize.height / 6,
+                    }
+                  : {
+                      width: windowSize.width / 7,
+                      height: windowSize.height / 6,
+                      filter: "brightness(40%)",
+                    }
+                : { width: windowSize.width / 7, height: windowSize.height / 6 }
+            }
             onClick={handleClick}
           >
             {el == 1 && el1 == 1 ? (
@@ -228,7 +261,7 @@ function App() {
               id={containerClassNames1[tetrisShapes[el][el1]]}
               style={showall ? { color: "white" } : {}}
             >
-              {bigdata[el][el1]}
+              {bigdata[el][el1]["name"]}
             </span>
           </div>
         );
@@ -264,7 +297,7 @@ function App() {
       setLastClicked(className);
     }
     setcontainerClassNames(updatedData);
-    console.log(updatedData);
+    // console.log(updatedData);
 
     setIsClicked(!isClicked);
   };
@@ -287,6 +320,18 @@ function App() {
       setcontainerClassNames(updatedData);
     }
     setShowall(check);
+    setselectedvalue(10);
+  };
+  const svalue = (number) => {
+    console.log(number);
+    if (valueselected == number) {
+      setselectedvalue(10);
+      console.log("end orloo");
+      setShowall(false);
+      return;
+    }
+    setShowall(true);
+    setselectedvalue(number);
   };
 
   return (
@@ -295,9 +340,45 @@ function App() {
       className={styles.container}
       style={{ width: "100%", height: "100%" }}
     >
-      <button className={styles.btnn} onClick={handleClick1} size="lg">
+      <Menu>
+        <MenuButton
+          as={IconButton}
+          aria-label="Options"
+          icon={<HamburgerIcon />}
+          // variant="outline"
+          position="absolute"
+          className={styles.btnn}
+        >
+          Харуулах
+        </MenuButton>
+        <MenuList>
+          <MenuItem onClick={handleClick1}>
+            {showall ? "Бүгдийг хаах" : "Бүгдийг харах "}
+          </MenuItem>
+          <MenuItem
+            onClick={() => svalue(0)}
+            icon={<CheckCircleIcon color={"green"} />}
+          >
+            Хийгдсэн
+          </MenuItem>
+          <MenuItem
+            onClick={() => svalue(1)}
+            icon={<RepeatIcon color={"pink.600"} />}
+          >
+            Хийгдэж буй
+          </MenuItem>
+          <MenuItem
+            onClick={() => svalue(2)}
+            icon={<TimeIcon color={"blue"} />}
+          >
+            Төлөвлөж буй
+          </MenuItem>
+        </MenuList>
+      </Menu>
+
+      {/* <button onClick={handleClick1} size="lg">
         {showall ? "Хаах" : "Бүгдийг харуулах "}
-      </button>
+      </button> */}
       {generateElements()}
     </div>
   );
