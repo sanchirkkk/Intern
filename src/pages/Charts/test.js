@@ -443,14 +443,14 @@ function App() {
       </button> */}
 
       <div
-        style={{ width: "90%", height: "100%" }}
+        style={{ width: windowSize.width * 0.9, height: windowSize.height }}
         className={styles.container}
       >
         {generateElements()}
       </div>
       <div
         className={styles.categorys}
-        style={{ width: "10%", height: windowSize.height }}
+        style={{ width: windowSize.width * 0.1, height: windowSize.height }}
       >
         {generateButton()}
       </div>
