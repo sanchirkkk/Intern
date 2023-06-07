@@ -455,7 +455,7 @@ function App() {
         {generateButton()}
       </div>
 
-      {/* <Drawer
+      <Drawer
         isOpen={isOpen}
         placement="left"
         onClose={onCloseD}
@@ -498,7 +498,7 @@ function App() {
             <Button colorScheme="blue">Оруулах</Button>
           </DrawerFooter>
         </DrawerContent>
-      </Drawer> */}
+      </Drawer>
     </div>
   );
 }
