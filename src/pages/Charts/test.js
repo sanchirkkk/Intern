@@ -115,20 +115,20 @@ function App() {
   const btnRef = useRef();
 
   const categorydata = [
-    { color: "#9ACCE3", value: 1, name: "Customer Valuation" },
-    { color: "#86C0DF", value: 2, name: "Customer Support" },
-    { color: "#72B3DB", value: 3, name: "Business Support" },
-    { color: "#5EABD8", value: 4, name: "Completed" },
-    { color: "#4A9ED4", value: 5, name: "Ongoing" },
-    { color: "#3691D0", value: 6, name: "Planned" },
-    { color: "#2283CC", value: 7, name: "Identify" },
-    { color: "#1077C9", value: 8, name: "Cooperate" },
-    { color: "#0D6AB2", value: 9, name: "Retain" },
-    { color: "#0A5C9C", value: 10, name: "Non-Customer" },
-    { color: "#084B7A", value: 11, name: "Customer experience" },
-    { color: "#063B58", value: 12, name: "Risk" },
-    { color: "#042A37", value: 13, name: "Process automation" },
-    { color: "#021916", value: 14, name: "Sales" },
+    { color: "#73C74A", value: 1, name: "Customer Valuation" },
+    { color: "#6EC248", value: 2, name: "Customer Support" },
+    { color: "#68BD47", value: 3, name: "Business Support" },
+    { color: "#62B845", value: 4, name: "Completed" },
+    { color: "#5CB343", value: 5, name: "Ongoing" },
+    { color: "#56AE41", value: 6, name: "Planned" },
+    { color: "#50A940", value: 7, name: "Identify" },
+    { color: "#4AA33E", value: 8, name: "Cooperate" },
+    { color: "#449D3C", value: 9, name: "Retain" },
+    { color: "#3F973B", value: 10, name: "Non-Customer" },
+    { color: "#398F39", value: 11, name: "Customer experience" },
+    { color: "#338938", value: 12, name: "Risk" },
+    { color: "#2D8336", value: 13, name: "Process automation" },
+    { color: "#277D34", value: 14, name: "Sales" },
   ];
   const [isOpen, setOpen] = useState(false);
 
@@ -154,6 +154,7 @@ function App() {
   useEffect(() => {
     function handleResize() {
       setWindowSize({ width: window.innerWidth, height: window.innerHeight });
+      console.log(windowSize);
     }
     window.addEventListener("resize", handleResize);
     handleResize();
@@ -182,7 +183,7 @@ function App() {
               valueselected != 99
                 ? bigdata[el][el1]["value"].includes(valueselected)
                   ? {
-                      "box-shadow":
+                      boxShadow:
                         "rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px",
                       width: (windowSize.width * 0.85) / 8,
                       height: windowSize.height / 6,
@@ -326,7 +327,7 @@ function App() {
             <Text
               style={showall ? { color: "white" } : {}}
               id={containerClassNames1[tetrisShapes[el][el1]]}
-              fontSize="sm"
+              fontSize="md"
             >
               {bigdata[el][el1]["name"]}
             </Text>
