@@ -115,20 +115,20 @@ function App() {
   const btnRef = useRef();
 
   const categorydata = [
-    { color: "#73C74A", value: 1, name: "Customer Valuation" },
-    { color: "#6EC248", value: 2, name: "Customer Support" },
-    { color: "#68BD47", value: 3, name: "Business Support" },
-    { color: "#62B845", value: 4, name: "Completed" },
-    { color: "#5CB343", value: 5, name: "Ongoing" },
-    { color: "#56AE41", value: 6, name: "Planned" },
-    { color: "#50A940", value: 7, name: "Identify" },
-    { color: "#4AA33E", value: 8, name: "Cooperate" },
-    { color: "#449D3C", value: 9, name: "Retain" },
-    { color: "#3F973B", value: 10, name: "Non-Customer" },
-    { color: "#398F39", value: 11, name: "Customer experience" },
-    { color: "#338938", value: 12, name: "Risk" },
-    { color: "#2D8336", value: 13, name: "Process automation" },
-    { color: "#277D34", value: 14, name: "Sales" },
+    { color: "#262627", value: 1, name: "Customer Valuation" },
+    { color: "#2C2C2D", value: 2, name: "Customer Support" },
+    { color: "#333335", value: 3, name: "Business Support" },
+    { color: "#39393A", value: 4, name: "Completed" },
+    { color: "#404041", value: 5, name: "Ongoing" },
+    { color: "#464648", value: 6, name: "Planned" },
+    { color: "#4C4C4F", value: 7, name: "Identify" },
+    { color: "#535356", value: 8, name: "Cooperate" },
+    { color: "#59595C", value: 9, name: "Retain" },
+    { color: "#606063", value: 10, name: "Non-Customer" },
+    { color: "#666669", value: 11, name: "Customer experience" },
+    { color: "#6C6C6F", value: 12, name: "Risk" },
+    { color: "#737376", value: 13, name: "Process automation" },
+    { color: "#79797B", value: 14, name: "Sales" },
   ];
   const [isOpen, setOpen] = useState(false);
 
@@ -344,7 +344,8 @@ function App() {
           onClick={() => svalue(item["value"])}
           className={styles.smallcon}
           style={{
-            backgroundColor: item["color"],
+            backgroundColor:
+              valueselected == item["value"] ? "#141414" : item["color"],
             color: "white",
             width: "100%",
             height: windowSize.height / 14,
