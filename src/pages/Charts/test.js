@@ -191,7 +191,7 @@ function App() {
                   : {
                       width: (windowSize.width * 0.85) / 8,
                       height: windowSize.height / 6,
-                      filter: "brightness(40%)",
+                      filter: "brightness(20%)",
                     }
                 : {
                     width: (windowSize.width * 0.85) / 8,
