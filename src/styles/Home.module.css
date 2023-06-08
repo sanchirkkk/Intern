@@ -27,8 +27,8 @@
 }
 
 .tetrisShape1 {
-  background-color: #283466;
-  color: #283466;
+  background-color: #2a71bf;
+  color: #2a71bf;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,32 +38,32 @@
 
 
 .tetrisShape2 {
-  background-color: #d17999;
-  color: #d17999;
+  background-color: #bf5f9c;
+  color: #bf5f9c;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .tetrisShape3 {
-  background-color: #934ba5;
-  color: #934ba5;
+  background-color: #7a3298;
+  color: #7a3298;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .tetrisShape4 {
-  background-color: #40bec6;
-  color:#40bec6;
+  background-color: #262d73;
+  color:#262d73;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .tetrisShape5 {
-  background-color: #7082c1;
-  color: #7082c1;
+  background-color: #2b4fa7;
+  color: #2b4fa7;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,24 +71,24 @@
 }
 
 .tetrisShape7 {
-  background-color: #c65ca7;
-  color: #c65ca7;
+  background-color: #bc42b1;
+  color: #bc42b1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .tetrisShape8 {
-  background-color: #7A79B3;
-  color: #7A79B3;
+  background-color: #a73998;
+  color:#a73998;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .tetrisShape9 {
-  background-color: #c59187;
-  color:#c59187;
+  background-color: #b47a8b;
+  color:#b47a8b;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -109,7 +109,7 @@
 }
 
 .tetrisShape11 {
-  background-color: #283466;
+  background-color: #2a71bf;
   color: white;
   display: flex;
   justify-content: center;
@@ -121,7 +121,7 @@
 
 
 .tetrisShape21 {
-  background-color: #d17999;
+  background-color: #bf5f9c;
   color: white;
   display: flex;
   justify-content: center;
@@ -130,7 +130,7 @@
 }
 
 .tetrisShape31 {
-  background-color: #934ba5;
+  background-color: #7a3298;
   color: white;
   display: flex;
   justify-content: center;
@@ -139,7 +139,7 @@
 }
 
 .tetrisShape41 {
-  background-color: #40bec6;
+  background-color: #262d73;
   color: white;
   display: flex;
   justify-content: center;
@@ -148,7 +148,7 @@
 }
 
 .tetrisShape51 {
-  background-color: #7082c1;
+  background-color: #2b4fa7;
   color: white;
   display: flex;
   justify-content: center;
@@ -158,7 +158,7 @@
 }
 
 .tetrisShape71 {
-  background-color: #c65ca7;
+  background-color: #bc42b1;
   transition: background-color 0.3s ease, color 0.3s ease, display 0.3s ease, justify-content 0.3s ease, align-items 0.3s ease;
   color: white;
   display: flex;
@@ -167,7 +167,7 @@
 }
 
 .tetrisShape81 {
-  background-color: #7A79B3;
+  background-color: #a73998;
   transition: background-color 0.3s ease, color 0.3s ease, display 0.3s ease, justify-content 0.3s ease, align-items 0.3s ease;
   color: white;
   display: flex;
@@ -176,7 +176,7 @@
 }
 
 .tetrisShape91 {
-  background-color: #c59187;
+  background-color: #b47a8b;
   transition: background-color 0.3s ease, color 0.3s ease, display 0.3s ease, justify-content 0.3s ease, align-items 0.3s ease;
   color: white;
   display: flex;
@@ -226,7 +226,7 @@
   justify-content: space-around;
   height: 100%;
   align-items: center;
-  color: #7082c1;
+  color: #2b4fa7;
 }
 
 .smallcon {
