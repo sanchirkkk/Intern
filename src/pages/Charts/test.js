@@ -38,64 +38,59 @@ import { Button, Show } from "@chakra-ui/react";
 function App() {
   const [bigdata, setbigdata] = useState([
     [
-      { name: "", value: [] },
-      { name: "Credit Card Recommendation", value: [2, 4, 8, 14] },
-      { name: "Currency Prediction", value: [3, 6, 10, 13] },
-      { name: "Behavioral Scoring", value: [1, 4, 7, 12] },
-      { name: "Collateral Valuation", value: [1, 6, 8, 12] },
-      { name: "Potential New-Adult Customer", value: [3, 6, 7, 14] },
-      { name: "Cashflow Prediction", value: [1, 6, 8, 13] },
-      { name: "Personalized Product", value: [2, 6, 9, 11] },
+      { name: "Risk Adjusted Rate", values: [4, 6, 8] },
+      { name: "Loan Portfolio Optimization", values: [4, 9] },
+      { name: "Fraud Detection", values: [4, 5, 9] },
+      { name: "MLOps", values: [2, 10] },
+      { name: "DST Functions Library", values: [1, 2, 10] },
+      { name: "Customer Lifetime Scoring", values: [4, 5, 10] },
+      { name: "Customer Churning", values: [1, 7, 9] },
+      { name: "Savings Recommendation", values: [4, 6, 11] },
+      { name: "Salary Loan Recommendation", values: [1, 6, 11] },
     ],
     [
-      { name: "Credit Card Segmentation", value: [3, 4, 8, 14] },
-      { name: "", value: [] },
-      { name: "Interest Rate Prediction", value: [3, 6, 10, 13] },
-      { name: "Debt Collection", value: [1, 4, 8, 12] },
-      { name: "Potential Priority Customer", value: [3, 6, 7, 14] },
-      { name: "Business Industry", value: [1, 4, 7, 14] },
-      { name: "Savings Recommendation", value: [2, 6, 8, 14] },
-      { name: "", value: [] },
+      { name: "Early Warning", values: [1, 6, 9] },
+      { name: "Debt Collection", values: [1, 6, 9] },
+      { name: "Collateral Valuation", values: [4, 6, 9] },
+      { name: "ChatOps", values: [1, 6, 8] },
+      { name: "Transaction Receipt Analysis", values: [1, 6, 10] },
+      { name: "Customer Sentiment Analysis", values: [4, 7, 8] },
+      { name: "Behavioral Scoring", values: [1, 2, 5, 9] },
+      { name: "Personalized Product", values: [4, 7, 8] },
+      { name: "Insurance product recommendation", values: [1, 2, 6, 10] },
     ],
     [
-      { name: "Portfolio Optimization", value: [3, 6, 10, 13] },
-      { name: "Industry Growth", value: [3, 6, 10, 13] },
-      { name: "", value: [] },
-      { name: "Early Warning", value: [1, 5, 8, 12] },
-      { name: "", value: [] },
-      { name: "Personal Spending", value: [2, 6, 8, 11] },
-      { name: "Voice Recognized Transaction", value: [2, 6, 8, 11] },
-      { name: "Customer Churning", value: [1, 5, 9, 12] },
+      { name: "Anomaly Detection", values: [4, 7, 8] },
+      { name: "Potential Priority Customer", values: [1, 2, 5, 11] },
+      { name: "Potential New-Adult Customer", values: [2, 5, 11] },
+      { name: "Loan Eligible customers", values: [1, 6, 8, 9] },
+      { name: "conversational AI", values: [1, 6, 8] },
+      { name: "Portfolio Optimization", values: [4, 10] },
+      { name: "Deposit product recommendation", values: [1, 6, 10] },
+      { name: "Credit card product recommendation", values: [1, 2, 6, 10] },
+      { name: "Personal Spending", values: [4, 6, 8] },
     ],
     [
-      { name: "", value: [] },
-      { name: "Loan Segmentation", value: [3, 6, 10, 12] },
-      { name: "Loan Portfolio Optimization", value: [3, 6, 10, 12] },
-      { name: "", value: [] },
-      { name: "Customer Segmentation", value: [3, 5, 8, 14] },
-      { name: "", value: [] },
-      { name: "Signature Verification", value: [3, 6, 10, 13] },
-      { name: "Fraud Detection", value: [3, 6, 7, 12] },
+      { name: "Business Lookalike", values: [1, 5, 11] },
+      { name: "Business Industry", values: [1, 5, 11] },
+      { name: "Voice Recognized Transaction", values: [4, 6, 8] },
+      { name: "Signature Verification", values: [4, 10] },
+      { name: "Interest Rate Prediction", values: [4, 10] },
+      { name: "Industry Growth", values: [4, 10] },
+      { name: "Loan Segmentation", values: [4, 9] },
+      { name: "Fintech Cashflow ", values: [1, 10] },
+      { name: "Customer Segmentation", values: [1, 6, 11] },
     ],
     [
-      { name: "Salary Loan Recommendation", value: [2, 4, 8, 14] },
-      { name: "Business Lookalike", value: [1, 4, 7, 14] },
-      { name: "Customer Behavior", value: [1, 6, 7, 11] },
-      { name: "Customer Behavior Forecasting", value: [1, 6, 7, 11] },
-      { name: "Anomaly Detection", value: [2, 6, 9, 11] },
-      { name: "Customer Sentiment Analysis", value: [2, 6, 9, 11] },
-      { name: "", value: [] },
-      { name: "Risk Adjusted Rate", value: [2, 6, 8, 11] },
-    ],
-    [
-      { name: "Business Income", value: [1, 5, 7, 14] },
-      { name: "", value: [] },
-      { name: "", value: [] },
-      { name: "Insurance Recommendation", value: [2, 4, 8, 14] },
-      { name: "Bank Wide Loyalty", value: [2, 5, 9, 11] },
-      { name: "Document Verification", value: [3, 6, 10, 13] },
-      { name: "NLP Chatbot", value: [2, 5, 8, 11] },
-      { name: "", value: [] },
+      { name: "Business Income", values: [1, 5, 11] },
+      { name: "Document Verification", values: [4, 10] },
+      { name: "Branch Load Management", values: [4, 6, 10] },
+      { name: "Customer Behavior Forecasting", values: [4, 5, 8] },
+      { name: "Currency Prediction", values: [4, 10] },
+      { name: "Customer Cashflow Prediction", values: [4, 6, 11] },
+      { name: "Customer Behavior", values: [4, 5, 8] },
+      { name: "Credit Card Segmentation", values: [1, 6, 11] },
+      { name: "Bank Wide Loyalty", values: [2, 7, 8] },
     ],
   ]);
   const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
@@ -111,34 +106,33 @@ function App() {
     styles.tetrisShape5,
     styles.tetrisShape6,
     styles.tetrisShape7,
+    styles.tetrisShape8,
+    styles.tetrisShape9,
   ]);
   const btnRef = useRef();
 
   const categorydata = [
-    { color: "#262627", value: 1, name: "Customer Valuation" },
-    { color: "#2C2C2D", value: 2, name: "Customer Support" },
-    { color: "#333335", value: 3, name: "Business Support" },
-    { color: "#39393A", value: 4, name: "Completed" },
-    { color: "#404041", value: 5, name: "Ongoing" },
-    { color: "#464648", value: 6, name: "Planned" },
-    { color: "#4C4C4F", value: 7, name: "Identify" },
-    { color: "#535356", value: 8, name: "Cooperate" },
-    { color: "#59595C", value: 9, name: "Retain" },
-    { color: "#606063", value: 10, name: "Non-Customer" },
-    { color: "#666669", value: 11, name: "Customer experience" },
-    { color: "#6C6C6F", value: 12, name: "Risk" },
-    { color: "#737376", value: 13, name: "Process automation" },
-    { color: "#79797B", value: 14, name: "Sales" },
+    { color: "#262627", value: 98, name: "ALL TASKS" },
+    { color: "#2C2C2D", value: 1, name: "Completed" },
+    { color: "#333335", value: 2, name: "Ongoing" },
+    { color: "#39393A", value: 3, name: "Planned" },
+    { color: "#404041", value: 4, name: "Ideas" },
+    { color: "#464648", value: 5, name: "Acqusition" },
+    { color: "#4C4C4F", value: 6, name: "Engagement" },
+    { color: "#535356", value: 7, name: "Retain" },
+    { color: "#59595C", value: 8, name: "Customer experience" },
+    { color: "#606063", value: 9, name: "Risk" },
+    { color: "#666669", value: 10, name: "Process automation" },
+    { color: "#6C6C6F", value: 11, name: "Sales" },
   ];
   const [isOpen, setOpen] = useState(false);
 
   const tetrisShapes = [
-    [0, 0, 1, 2, 2, 3, 4, 4],
-    [0, 1, 1, 2, 3, 3, 4, 4],
-    [1, 1, 2, 2, 3, 4, 4, 6],
-    [2, 2, 2, 3, 3, 4, 5, 6],
-    [2, 3, 3, 3, 4, 4, 5, 6],
-    [3, 3, 3, 4, 4, 5, 5, 6],
+    [8, 8, 8, 6, 6, 5, 5, 4, 4],
+    [8, 8, 8, 6, 2, 2, 5, 4, 4],
+    [8, 1, 1, 1, 2, 3, 4, 4, 0],
+    [1, 1, 7, 7, 3, 3, 0, 0, 0],
+    [1, 7, 7, 3, 3, 0, 0, 0, 0],
   ];
 
   const containerClassNames1 = [
@@ -149,6 +143,8 @@ function App() {
     "tetrisShape5",
     "tetrisShape6",
     "tetrisShape7",
+    "tetrisShape8",
+    "tetrisShape9",
   ];
 
   useEffect(() => {
@@ -164,8 +160,8 @@ function App() {
   }, []);
 
   const generateElements = () => {
-    return Array.from({ length: 6 }).map((item, el) => {
-      return Array.from({ length: 8 }).map((item1, el1) => {
+    return Array.from({ length: 5 }).map((item, el) => {
+      return Array.from({ length: 9 }).map((item1, el1) => {
         let containerClassName = containerClassNames[tetrisShapes[el][el1]];
 
         return (
@@ -181,87 +177,37 @@ function App() {
             }`}
             style={
               valueselected != 99
-                ? bigdata[el][el1]["value"].includes(valueselected)
+                ? bigdata[el][el1]["values"].includes(valueselected)
                   ? {
                       boxShadow:
                         "rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em",
-                      width: (windowSize.width * 0.85) / 8,
-                      height: windowSize.height / 6,
+                      width: (windowSize.width * 0.85) / 9,
+                      height: windowSize.height / 5,
                     }
                   : {
-                      width: (windowSize.width * 0.85) / 8,
-                      height: windowSize.height / 6,
+                      width: (windowSize.width * 0.85) / 9,
+                      height: windowSize.height / 5,
                       filter: "brightness(20%)",
                     }
                 : {
-                    width: (windowSize.width * 0.85) / 8,
-                    height: windowSize.height / 6,
+                    width: (windowSize.width * 0.85) / 9,
+                    height: windowSize.height / 5,
                   }
             }
             onClick={handleClick}
           >
-            {el == 0 && el1 == 0 ? (
+            {el == 0 && el1 == 1 ? (
               <Text
-                fontSize="2xl"
+                fontSize="4xl"
                 className={styles.texttitle}
                 style={
-                  showall || lastClicked === "tetrisShape1"
+                  showall || lastClicked === "tetrisShape9"
                     ? {
                         opacity: 0,
+                        marginTop: "20vh",
+                        // marginTop: "10px",
                       }
-                    : {}
-                }
-              >
-                CARD
-              </Text>
-            ) : (
-              ""
-            )}
-            {el == 1 && el1 == 2 ? (
-              <Text
-                fontSize="2xl"
-                className={styles.texttitle}
-                style={
-                  showall || lastClicked == "tetrisShape2"
-                    ? {
-                        opacity: 0,
-                      }
-                    : {}
-                }
-              >
-                {"Macro".toLocaleUpperCase()} <br />
-                {"Economics".toLocaleUpperCase()}
-              </Text>
-            ) : (
-              ""
-            )}
-            {el == 3 && el1 == 2 ? (
-              <Text
-                fontSize="2xl"
-                className={styles.texttitle}
-                style={
-                  showall || lastClicked == "tetrisShape3"
-                    ? {
-                        opacity: 0,
-                      }
-                    : {}
-                }
-              >
-                LOAN
-              </Text>
-            ) : (
-              ""
-            )}
-            {el == 4 && el1 == 7 ? (
-              <Text
-                fontSize="2xl"
-                className={styles.texttitle}
-                style={
-                  showall || lastClicked == "tetrisShape7"
-                    ? {
-                        opacity: 0,
-                      }
-                    : {}
+                    : { marginTop: "20vh" }
                 }
               >
                 RISK
@@ -269,56 +215,149 @@ function App() {
             ) : (
               ""
             )}
-            {el == 5 && el1 == 1 ? (
+            {el == 0 && el1 == 5 ? (
+              <Text
+                fontSize="3xl"
+                className={styles.texttitle}
+                style={
+                  showall || lastClicked === "tetrisShape6"
+                    ? {
+                        opacity: 0,
+                        marginTop: "5vh",
+                        marginLeft: "10vw",
+                        // marginTop: "10px",
+                      }
+                    : { marginTop: "5vh", marginLeft: "10vw" }
+                }
+              >
+                {"Scoring".toUpperCase()}
+              </Text>
+            ) : (
+              ""
+            )}
+            {el == 3 && el1 == 1 ? (
               <Text
                 fontSize="2xl"
+                className={styles.texttitle}
+                style={
+                  showall || lastClicked == "tetrisShape2"
+                    ? {
+                        opacity: 0,
+                        marginBottom: "19vh",
+                      }
+                    : { marginBottom: "19vh" }
+                }
+              >
+                CUSTOMER
+              </Text>
+            ) : (
+              ""
+            )}
+            {el == 4 && el1 == 2 ? (
+              <Text
+                fontSize="2xl"
+                className={styles.texttitle}
+                style={
+                  showall || lastClicked == "tetrisShape8"
+                    ? {
+                        opacity: 0,
+                        marginBottom: "20vh",
+                      }
+                    : { marginBottom: "20vh" }
+                }
+              >
+                {"Operation".toUpperCase()}
+              </Text>
+            ) : (
+              ""
+            )}
+            {el == 0 && el1 == 3 ? (
+              <Text
+                fontSize="3xl"
+                className={styles.texttitle}
+                style={
+                  showall || lastClicked == "tetrisShape7"
+                    ? {
+                        opacity: 0,
+                        marginLeft: "10vw",
+                      }
+                    : { marginLeft: "10vw" }
+                }
+              >
+                {"Technology".toUpperCase()}
+              </Text>
+            ) : (
+              ""
+            )}
+            {el == 1 && el1 == 4 ? (
+              <Text
+                fontSize="4xl"
+                className={styles.texttitle}
+                style={
+                  showall || lastClicked == "tetrisShape3"
+                    ? {
+                        opacity: 0,
+                        marginLeft: "10vw",
+                      }
+                    : { marginLeft: "10vw" }
+                }
+              >
+                {"nlp".toUpperCase()}
+              </Text>
+            ) : (
+              ""
+            )}
+            {el == 3 && el1 == 4 ? (
+              <Text
+                fontSize="4xl"
                 className={styles.texttitle}
                 style={
                   showall || lastClicked == "tetrisShape4"
                     ? {
                         opacity: 0,
+                        marginLeft: "8vw",
                       }
-                    : {}
+                    : { marginLeft: "8vw" }
                 }
               >
-                BANK <br />
-                FOCUSED <br />
-                BUSINESS
+                {"Predictive".toUpperCase()}
               </Text>
             ) : (
               ""
             )}
-            {el == 5 && el1 == 6 ? (
+            {el == 3 && el1 == 7 ? (
               <Text
-                fontSize="2xl"
+                fontSize="4xl"
                 className={styles.texttitle}
                 style={
-                  showall || lastClicked == "tetrisShape6"
+                  showall || lastClicked == "tetrisShape1"
                     ? {
                         opacity: 0,
+                        marginTop: "20vh",
                       }
-                    : {}
+                    : { marginTop: "20vh" }
                 }
               >
-                Operation
+                {"Market".toUpperCase()}
               </Text>
             ) : (
               ""
             )}
-            {el == 3 && el1 == 5 ? (
+            {el == 1 && el1 == 7 ? (
               <Text
-                fontSize="2xl"
+                fontSize="4xl"
                 className={styles.texttitle}
                 style={
                   showall || lastClicked == "tetrisShape5"
                     ? {
                         opacity: 0,
+                        marginLeft: "10vw",
+                        marginBottom: "14vh",
                       }
-                    : {}
+                    : { marginLeft: "10vw", marginBottom: "14vh" }
                 }
               >
-                {" "}
-                CUSTOMER <br /> FOCUSED <br /> BUSINESS
+                {"Product".toUpperCase()}
               </Text>
             ) : (
               ""
@@ -341,14 +380,16 @@ function App() {
     return categorydata.map((item, index) => {
       return (
         <div
-          onClick={() => svalue(item["value"])}
+          onClick={
+            item["value"] == 98 ? () => showaall() : () => svalue(item["value"])
+          }
           className={styles.smallcon}
           style={{
             backgroundColor:
               valueselected == item["value"] ? "#141414" : item["color"],
             color: "white",
             width: "100%",
-            height: windowSize.height / 14,
+            height: windowSize.height / 12,
           }}
         >
           <Text fontSize="md"> {item["name"]}</Text>
@@ -367,6 +408,8 @@ function App() {
       "tetrisShape5",
       "tetrisShape6",
       "tetrisShape7",
+      "tetrisShape8",
+      "tetrisShape9",
     ];
     let updatedData;
     if (className == lastClicked) {
@@ -399,6 +442,8 @@ function App() {
       "tetrisShape5",
       "tetrisShape6",
       "tetrisShape7",
+      "tetrisShape8",
+      "tetrisShape9",
     ];
     let updatedData = data.map((item) => {
       return styles[item];
@@ -422,9 +467,12 @@ function App() {
   };
 
   const showaall = () => {
-    setShowall(true);
+    let value = !showall;
+    if (value) {
+      setShowall(value);
+    }
+    setShowall(value);
     setselectedvalue(99);
-    onCloseD();
   };
 
   const onCloseD = () => {
