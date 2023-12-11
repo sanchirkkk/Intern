@@ -36,63 +36,53 @@ import {
 import styles from "@/styles/Home.module.css";
 import { Button, Show } from "@chakra-ui/react";
 function App() {
-  const [bigdata, setbigdata] = useState([
-    [
-      { name: "Risk Adjusted Rate", values: [4, 6, 8] },
-      { name: "Loan Portfolio Optimization", values: [3, 9] },
-      { name: "Fraud Detection", values: [4, 5, 9] },
-      { name: "MLOps", values: [2, 10] },
-      { name: "DST Functions Library", values: [1, 2, 10] },
-      { name: "Customer Lifetime Scoring", values: [4, 5, 10] },
-      { name: "Customer Churning", values: [1, 7, 9] },
-      { name: "Savings Recommendation", values: [3, 6, 11] },
-      { name: "Salary Loan Recommendation", values: [1, 6, 11] },
-    ],
-    [
-      { name: "Early Warning", values: [1, 6, 9] },
-      { name: "Debt Collection", values: [1, 6, 9] },
-      { name: "Collateral Valuation", values: [4, 6, 9] },
-      { name: "ChatOps", values: [1, 6, 8] },
-      { name: "Transaction Receipt Analysis", values: [1, 6, 10] },
-      { name: "Customer Sentiment Analysis", values: [4, 7, 8] },
-      { name: "Behavioral Scoring", values: [1, 2, 5, 9] },
-      { name: "Personalized Product", values: [3, 7, 8] },
-      { name: "Insurance product recommendation", values: [1, 2, 6, 10] },
-    ],
-    [
-      { name: "Anomaly Detection", values: [4, 7, 8] },
-      { name: "Potential Priority Customer", values: [1, 2, 5, 11] },
-      { name: "Potential New-Adult Customer", values: [2, 5, 11] },
-      { name: "Loan Eligible customers", values: [1, 6, 8, 9] },
-      { name: "conversational AI", values: [1, 6, 8] },
-      { name: "Portfolio Optimization", values: [3, 10] },
-      { name: "Deposit product recommendation", values: [1, 6, 10] },
-      { name: "Credit card product recommendation", values: [1, 2, 6, 10] },
-      { name: "Personal Spending", values: [4, 6, 8] },
-    ],
-    [
-      { name: "Business Lookalike", values: [1, 5, 11] },
-      { name: "Business Industry", values: [1, 5, 11] },
-      { name: "Voice Recognized Transaction", values: [4, 6, 8] },
-      { name: "Signature Verification", values: [4, 10] },
-      { name: "Interest Rate Prediction", values: [3, 10] },
-      { name: "Industry Growth", values: [3, 10] },
-      { name: "Loan Segmentation", values: [3, 9] },
-      { name: "Fintech Cashflow ", values: [1, 10] },
-      { name: "Customer Segmentation", values: [1, 6, 11] },
-    ],
-    [
-      { name: "Business Income", values: [1, 5, 11] },
-      { name: "Document Verification", values: [4, 10] },
-      { name: "Branch Load Management", values: [4, 6, 10] },
-      { name: "Customer Behavior Forecasting", values: [4, 5, 8] },
-      { name: "Currency Prediction", values: [3, 10] },
-      { name: "Customer Cashflow Prediction", values: [4, 6, 11] },
-      { name: "Customer Behavior", values: [4, 5, 8] },
-      { name: "Credit Card Segmentation", values: [1, 6, 11] },
-      { name: "Bank Wide Loyalty", values: [2, 7, 8] },
-    ],
-  ]);
+  const [bigdata, setbigdata] = useState(
+   [ [{name:'Loan product recommendation model-v1', values:[2,5,6,11]},
+{name:'Deposit product recommendation model-v1', values:[2]},
+{name:'BS Enhancement Consulting', values:[1,9]},
+{name:'Business Loan Early Warning model', values:[1,9]},
+{name:'Business Income Model: Expense categorization', values:[3,6,8,9,11]},
+{name:'Business Income Model: Sector & Owner prediction', values:[1,6,8,9,11]},
+{name:'Data creation rule & structure', values:[1,10]},
+{name:'DST library', values:[1,10]},
+],
+[{name:'Business Income Model: Account Filtering', values:[3,6,8,9,11]},
+{name:'Product recommendation model: Insurance, credit card', values:[1,6,11]},
+{name:'Improved customer churning prediction model', values:[1,7,11]},
+{name:'Churning segmentation model', values:[1,5,6,10]},
+{name:'Family Linkage Model', values:[2,6,10]},
+{name:'Calculation of loan provision', values:[2,9]},
+{name:'Automation of hedge efficiency test', values:[1,5,6,11]},
+{name:'Online Loan agreement check ', values:[1,9]},
+],
+[{name:'Transaction Activity Segmentation', values:[1,7,10]},
+{name:'Customer Lifetime value', values:[3,5,6,7,11]},
+{name:'Bank Wide Loyalty', values:[3,5,6,7,11]},
+{name:'NLP Chatbot: Social implementation', values:[2,6,8]},
+{name:'Card product analyses', values:[1,5,6,11]},
+{name:'Product recommendation rule: Debit card, online loan product, credit card, deposit rule', values:[1,6,11]},
+{name:'Marketing module: data collection, job development and automation', values:[1,5,6,8]},
+{name:'MLOPS â Open Source Implementation', values:[2,10]},
+],
+[{name:'NLP Chatbot: Khagan implementation', values:[1,6,8]},
+{name:'Customer Lifetime Value Research & implementation', values:[1,6]},
+{name:'Identifying potential priority customer', values:[1,5,6,11]},
+{name:'Teacher card recommendation', values:[1,5,6,11]},
+{name:'Customer feedback and interest analysis', values:[2,7,10]},
+{name:'Customer tag', values:[2]},
+{name:'MLOPS â Demo, Procurement', values:[1,10]},
+{name:'MLOPS - RFP', values:[1,10]},
+],
+[{name:'Retail Segmentation model ', values:[1,6]},
+{name:'Call center analyses', values:[2,7,10]},
+{name:'NLP Chatbot: BRD', values:[1,6,8]},
+{name:'NLP Chatbot: Research Phase', values:[1,6,8]},
+{name:'Retail Segmentation model research', values:[1,6]},
+{name:'Retail Segmentation data engineering', values:[1,6]},
+{name:'MLOPS - EAC', values:[1,10]},
+{name:'MLOPS - PoC', values:[1,10]},
+]]
+    );
   const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
   const [isClicked, setIsClicked] = useState(false);
   const [lastClicked, setLastClicked] = useState("none");
@@ -113,10 +103,10 @@ function App() {
 
   const categorydata = [
     { color: "#262627", value: 98, name: "ALL TASKS" },
-    { color: "#2C2C2D", value: 1, name: "Completed" },
+    { color: "#2C2C2D", value: 1, name: "Done" },
     { color: "#333335", value: 2, name: "Ongoing" },
-    { color: "#39393A", value: 3, name: "Planned" },
-    { color: "#404041", value: 4, name: "Ideas" },
+    { color: "#39393A", value: 3, name: "On Hold" },
+    // { color: "#404041", value: 4, name: "Ideas" },
     { color: "#464648", value: 5, name: "Acqusition" },
     { color: "#4C4C4F", value: 6, name: "Engagement" },
     { color: "#535356", value: 7, name: "Retain" },
@@ -128,11 +118,11 @@ function App() {
   const [isOpen, setOpen] = useState(false);
 
   const tetrisShapes = [
-    [8, 8, 8, 6, 6, 5, 5, 4, 4],
-    [8, 8, 8, 6, 2, 2, 5, 4, 4],
-    [8, 1, 1, 1, 2, 3, 4, 4, 0],
-    [1, 1, 7, 7, 3, 3, 0, 0, 0],
-    [1, 7, 7, 3, 3, 0, 0, 0, 0],
+    [1,1,1,1,1,1,3,3,],
+    [1,1,1,1,1,3,3,3,],
+    [1,1,1,2,2,3,3,4,],
+    [1,1,2,2,2,3,4,4,],
+    [1,2,2,2,2,3,4,4,],
   ];
 
   const containerClassNames1 = [
@@ -144,7 +134,7 @@ function App() {
     "tetrisShape6",
     "tetrisShape7",
     "tetrisShape8",
-    "tetrisShape9",
+    // "tetrisShape9",
   ];
 
   useEffect(() => {
@@ -161,7 +151,7 @@ function App() {
 
   const generateElements = () => {
     return Array.from({ length: 5 }).map((item, el) => {
-      return Array.from({ length: 9 }).map((item1, el1) => {
+      return Array.from({ length: 8 }).map((item1, el1) => {
         let containerClassName = containerClassNames[tetrisShapes[el][el1]];
 
         return (
@@ -181,22 +171,22 @@ function App() {
                   ? {
                       boxShadow:
                         "rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em",
-                      width: (windowSize.width * 0.85) / 9,
+                      width: (windowSize.width * 0.85) / 8,
                       height: windowSize.height / 5,
                     }
                   : {
-                      width: (windowSize.width * 0.85) / 9,
+                      width: (windowSize.width * 0.85) / 8,
                       height: windowSize.height / 5,
                       filter: "brightness(20%)",
                     }
                 : {
-                    width: (windowSize.width * 0.85) / 9,
+                    width: (windowSize.width * 0.85) / 8,
                     height: windowSize.height / 5,
                   }
             }
             onClick={handleClick}
           >
-            {el == 0 && el1 == 1 ? (
+            {el == 1 && el1 == 1 ? (
               <Text
                 fontSize="4xl"
                 className={styles.texttitle}
@@ -210,12 +200,12 @@ function App() {
                     : { marginTop: "20vh" }
                 }
               >
-                RISK
+                ML Model
               </Text>
             ) : (
               ""
             )}
-            {el == 0 && el1 == 5 ? (
+            {/* {el == 0 && el1 == 5 ? (
               <Text
                 fontSize="3xl"
                 className={styles.texttitle}
@@ -234,8 +224,8 @@ function App() {
               </Text>
             ) : (
               ""
-            )}
-            {el == 3 && el1 == 1 ? (
+            )} */}
+            {/* {el == 3 && el1 == 1 ? (
               <Text
                 fontSize="2xl"
                 className={styles.texttitle}
@@ -252,8 +242,8 @@ function App() {
               </Text>
             ) : (
               ""
-            )}
-            {el == 4 && el1 == 2 ? (
+            )} */}
+            {/* {el == 4 && el1 == 2 ? (
               <Text
                 fontSize="2xl"
                 className={styles.texttitle}
@@ -270,8 +260,8 @@ function App() {
               </Text>
             ) : (
               ""
-            )}
-            {el == 0 && el1 == 3 ? (
+            )} */}
+            {/* {el == 0 && el1 == 3 ? (
               <Text
                 fontSize="3xl"
                 className={styles.texttitle}
@@ -288,8 +278,8 @@ function App() {
               </Text>
             ) : (
               ""
-            )}
-            {el == 1 && el1 == 4 ? (
+            )} */}
+            {el == 1 && el1 == 6 ? (
               <Text
                 fontSize="4xl"
                 className={styles.texttitle}
@@ -302,12 +292,12 @@ function App() {
                     : { marginLeft: "10vw" }
                 }
               >
-                {"nlp".toUpperCase()}
+                {"Data Engineering"}
               </Text>
             ) : (
               ""
             )}
-            {el == 3 && el1 == 4 ? (
+            {el == 3 && el1 == 3 ? (
               <Text
                 fontSize="4xl"
                 className={styles.texttitle}
@@ -320,12 +310,12 @@ function App() {
                     : { marginLeft: "8vw" }
                 }
               >
-                {"Predictive".toUpperCase()}
+                {"Research and Analysis"}
               </Text>
             ) : (
               ""
             )}
-            {el == 3 && el1 == 7 ? (
+            {el == 3 && el1 == 6 ? (
               <Text
                 fontSize="4xl"
                 className={styles.texttitle}
@@ -338,12 +328,12 @@ function App() {
                     : { marginTop: "20vh" }
                 }
               >
-                {"Market".toUpperCase()}
+                {"ML Ops"}
               </Text>
             ) : (
               ""
             )}
-            {el == 1 && el1 == 7 ? (
+            {/* {el == 1 && el1 == 7 ? (
               <Text
                 fontSize="4xl"
                 className={styles.texttitle}
@@ -361,7 +351,7 @@ function App() {
               </Text>
             ) : (
               ""
-            )}
+            )} */}
 
             <Text
               style={showall ? { color: "white" } : {}}
@@ -389,7 +379,7 @@ function App() {
               valueselected == item["value"] ? "#141414" : item["color"],
             color: "white",
             width: "100%",
-            height: windowSize.height / 12,
+            height: windowSize.height / 11,
           }}
         >
           <Text fontSize="md"> {item["name"]}</Text>
@@ -494,7 +484,7 @@ function App() {
         onClick={onOpen}
         className={styles.btnn}
       >
-        Харуулах
+        Ð¥Ð°ÑÑÑÐ»Ð°Ñ
       </IconButton>
 
       <div
@@ -519,7 +509,7 @@ function App() {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
-          <DrawerHeader>Цэс</DrawerHeader>
+          <DrawerHeader>Ð¦ÑÑ</DrawerHeader>
 
           <DrawerBody>
             <Stack spacing={4}>
@@ -531,7 +521,7 @@ function App() {
                 colorScheme="green"
                 variant="solid"
               >
-                Бүгдийг харуулах
+                ÐÒ¯Ð³Ð´Ð¸Ð¹Ð³ ÑÐ°ÑÑÑÐ»Ð°Ñ
               </Button>
               <Button
                 leftIcon={<RepeatIcon />}
@@ -541,16 +531,16 @@ function App() {
                 colorScheme="pink"
                 variant="solid"
               >
-                Бүх сонголтыг арилгах
+                ÐÒ¯Ñ ÑÐ¾Ð½Ð³Ð¾Ð»ÑÑÐ³ Ð°ÑÐ¸Ð»Ð³Ð°Ñ
               </Button>
             </Stack>
           </DrawerBody>
 
           <DrawerFooter>
             <Button variant="outline" mr={3} onClick={onCloseD}>
-              Болих
+              ÐÐ¾Ð»Ð¸Ñ
             </Button>
-            <Button colorScheme="blue">Оруулах</Button>
+            <Button colorScheme="blue">ÐÑÑÑÐ»Ð°Ñ</Button>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>
