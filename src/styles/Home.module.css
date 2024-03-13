@@ -1,244 +1,244 @@
 .main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /* padding: 6rem; */
-  /* min-height: 100vh; */
-  height: 100%;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* padding: 6rem; */
+  /* min-height: 100vh; */
+  height: 100%;
+  width: 100%;
 }
- 
- 
+
+
 .container {
-  display: flex;
-  flex-wrap: wrap;
- 
+  display: flex;
+  flex-wrap: wrap;
+
 }
- 
+
 .smallcontainer {
-  /* border: 1px solid black; */
-  text-align: center;
-  cursor: pointer;
-  transition: color 0.3s ease;
-  transition: filter 0.3s ease;
- 
- 
+  /* border: 1px solid black; */
+  text-align: center;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  transition: filter 0.3s ease;
+
+
 }
- 
+
 .tetrisShape1 {
-  background-color: #2a71bf;
-  color: #2a71bf;
-  display: flex;
-  justify-content: center;
-  align-items: center;
- 
- 
+  background-color: #2a71bf;
+  color: #2a71bf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
 }
- 
- 
+
+
 .tetrisShape2 {
-  background-color:  #CC99FF ;
-  color:  #CC99FF ;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color:  #CC99FF ;
+  color:  #CC99FF ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
- 
+
 .tetrisShape3 {
-  background-color: #FFC000;
-  color: #FFC000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: #FFC000;
+  color: #FFC000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
- 
+
 .tetrisShape4 {
-  background-color: #ED7D31;
-  color:#ED7D31;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: #ED7D31;
+  color:#ED7D31;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
- 
+
 .tetrisShape5 {
-  background-color: #FF3399;
-  color: #FF3399;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 0px; */
+  background-color: #FF3399;
+  color: #FF3399;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 0px; */
 }
- 
+
 .tetrisShape7 {
-  background-color: #00B050;
-  color: #00B050;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: #00B050;
+  color: #00B050;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
- 
+
 .tetrisShape8 {
-  background-color: #a73998;
-  color:#a73998;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: #a73998;
+  color:#a73998;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
- 
+
 .tetrisShape9 {
-  background-color: #b47a8b;
-  color:#b47a8b;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: #b47a8b;
+  color:#b47a8b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
- 
+
 .tetrisShape6 {
-  background-color: #4CCCD6 ;
-  color: #4CCCD6 ;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: #4CCCD6 ;
+  color: #4CCCD6 ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
- 
+
 .texts {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
- 
- 
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+
 }
- 
+
 .tetrisShape11 {
-  background-color: #2a71bf;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background-color 0.3s ease, color 0.3s ease, display 0.3s ease, justify-content 0.3s ease, align-items 0.3s ease;
- 
- 
+  background-color: #2a71bf;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease, display 0.3s ease, justify-content 0.3s ease, align-items 0.3s ease;
+
+
 }
- 
- 
+
+
 .tetrisShape21 {
-  background-color:  #CC99FF ;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background-color 0.3s ease, color 0.3s ease, display 0.3s ease, justify-content 0.3s ease, align-items 0.3s ease;
+  background-color:  #CC99FF ;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease, display 0.3s ease, justify-content 0.3s ease, align-items 0.3s ease;
 }
- 
+
 .tetrisShape31 {
-  background-color: #FFC000;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background-color 0.3s ease, color 0.3s ease, display 0.3s ease, justify-content 0.3s ease, align-items 0.3s ease;
+  background-color: #FFC000;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease, display 0.3s ease, justify-content 0.3s ease, align-items 0.3s ease;
 }
- 
+
 .tetrisShape41 {
-  background-color: #ED7D31;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background-color 0.3s ease, color 0.3s ease, display 0.3s ease, justify-content 0.3s ease, align-items 0.3s ease;
+  background-color: #ED7D31;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease, display 0.3s ease, justify-content 0.3s ease, align-items 0.3s ease;
 }
- 
+
 .tetrisShape51 {
-  background-color: #FF3399;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background-color 0.3s ease, color 0.3s ease, display 0.3s ease, justify-content 0.3s ease, align-items 0.3s ease;
-  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 0px; */
+  background-color: #FF3399;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease, display 0.3s ease, justify-content 0.3s ease, align-items 0.3s ease;
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 0px; */
 }
- 
+
 .tetrisShape71 {
-  background-color: #00B050;
-  transition: background-color 0.3s ease, color 0.3s ease, display 0.3s ease, justify-content 0.3s ease, align-items 0.3s ease;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: #00B050;
+  transition: background-color 0.3s ease, color 0.3s ease, display 0.3s ease, justify-content 0.3s ease, align-items 0.3s ease;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
- 
+
 .tetrisShape81 {
-  background-color: #a73998;
-  transition: background-color 0.3s ease, color 0.3s ease, display 0.3s ease, justify-content 0.3s ease, align-items 0.3s ease;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: #a73998;
+  transition: background-color 0.3s ease, color 0.3s ease, display 0.3s ease, justify-content 0.3s ease, align-items 0.3s ease;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
- 
+
 .tetrisShape91 {
-  background-color: #b47a8b;
-  transition: background-color 0.3s ease, color 0.3s ease, display 0.3s ease, justify-content 0.3s ease, align-items 0.3s ease;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: #b47a8b;
+  transition: background-color 0.3s ease, color 0.3s ease, display 0.3s ease, justify-content 0.3s ease, align-items 0.3s ease;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
- 
+
 .tetrisShape61 {
-  background-color: #4CCCD6 ;
-  transition: background-color 0.3s ease, color 0.3s ease, display 0.3s ease, justify-content 0.3s ease, align-items 0.3s ease;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: #4CCCD6 ;
+  transition: background-color 0.3s ease, color 0.3s ease, display 0.3s ease, justify-content 0.3s ease, align-items 0.3s ease;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
- 
+
 .texttitle {
-  position: absolute;
- 
-  color: white;
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-  /* display: none; */
+  position: absolute;
+
+  color: white;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  /* display: none; */
 }
- 
+
 .btnn {
-  position: absolute;
-  top: 5px;
-  z-index: 1;
-  left: 5px;
-  /* width: 150px;
-  height: 80px; */
-  cursor: pointer;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  border: none;
-  border-radius: 5px;
+  position: absolute;
+  top: 5px;
+  z-index: 1;
+  left: 5px;
+  /* width: 150px;
+  height: 80px; */
+  cursor: pointer;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border: none;
+  border-radius: 5px;
 }
- 
+
 .bigcon {
-  display: flex;
+  display: flex;
 }
- 
+
 .categorys {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 100%;
-  align-items: center;
-  color: #FF3399;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  align-items: center;
+  color: #FF3399;
 }
- 
+
 .smallcon {
-  padding: 1vh;
-  cursor: pointer;
-  text-align: start;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 600;
+  padding: 1vh;
+  cursor: pointer;
+  text-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
 }
- 
+
 .smallcon:hover {
-  filter: brightness(90%)
+  filter: brightness(90%)
 }
