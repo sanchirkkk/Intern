@@ -37,51 +37,19 @@ import styles from "@/styles/Home.module.css";
 import { Button, Show } from "@chakra-ui/react";
 function App() {
   const [bigdata, setbigdata] = useState(
-   [ [{name:'Loan product recommendation model-v1', values:[2,5,6,11]},
-{name:'Deposit product recommendation model-v1', values:[2]},
-{name:'BS Enhancement Consulting', values:[1,9]},
-{name:'Business Loan Early Warning model', values:[1,9]},
-{name:'Business Income Model: Expense categorization', values:[3,6,8,9,11]},
-{name:'Business Income Model: Sector & Owner prediction', values:[1,6,8,9,11]},
-{name:'Data creation rule & structure', values:[1,10]},
-{name:'DST library', values:[1,10]},
-],
-[{name:'Business Income Model: Account Filtering', values:[3,6,8,9,11]},
-{name:'Product recommendation model: Insurance, credit card', values:[1,6,11]},
-{name:'Improved customer churning prediction model', values:[1,7,11]},
-{name:'Churning segmentation model', values:[1,5,6,10]},
-{name:'Family Linkage Model', values:[2,6,10]},
-{name:'Calculation of loan provision', values:[2,9]},
-{name:'Automation of hedge efficiency test', values:[1,5,6,11]},
-{name:'Online Loan agreement check ', values:[1,9]},
-],
-[{name:'Transaction Activity Segmentation', values:[1,7,10]},
-{name:'Customer Lifetime value', values:[3,5,6,7,11]},
-{name:'Bank Wide Loyalty', values:[3,5,6,7,11]},
-{name:'NLP Chatbot: Social implementation', values:[2,6,8]},
-{name:'Card product analyses', values:[1,5,6,11]},
-{name:'Product recommendation rule: Debit card, online loan product, credit card, deposit rule', values:[1,6,11]},
-{name:'Marketing module: data collection, job development and automation', values:[1,5,6,8]},
-{name:'MLOPS â Open Source Implementation', values:[2,10]},
-],
-[{name:'NLP Chatbot: Khagan implementation', values:[1,6,8]},
-{name:'Customer Lifetime Value Research & implementation', values:[1,6]},
-{name:'Identifying potential priority customer', values:[1,5,6,11]},
-{name:'Teacher card recommendation', values:[1,5,6,11]},
-{name:'Customer feedback and interest analysis', values:[2,7,10]},
-{name:'Customer tag', values:[2]},
-{name:'MLOPS â Demo, Procurement', values:[1,10]},
-{name:'MLOPS - RFP', values:[1,10]},
-],
-[{name:'Retail Segmentation model ', values:[1,6]},
-{name:'Call center analyses', values:[2,7,10]},
-{name:'NLP Chatbot: BRD', values:[1,6,8]},
-{name:'NLP Chatbot: Research Phase', values:[1,6,8]},
-{name:'Retail Segmentation model research', values:[1,6]},
-{name:'Retail Segmentation data engineering', values:[1,6]},
-{name:'MLOPS - EAC', values:[1,10]},
-{name:'MLOPS - PoC', values:[1,10]},
-]]
+   [ 
+    [
+      {name: '', values:[,]},{name: 'DIGITAL', values:[1,]},{name: 'GREEN ', values:[2,]},{name: 'CUSTOMER CARE ', values:[2,]},
+      {name: 'COLLABORATION', values:[2,]},{name: 'IDEATHON', values:[2,]},],[{name: 'LEAD', values:[1,]},{name: 'SUSTAINABLE', values:[1,]},
+    {name: 'IMPLEMENTATION', values:[2,]},{name: '', values:[,]},{name: '', values:[4,]},{name: 'R&D (testing) area', values:[4,]},],
+  [{name: 'Creativity', values:[1,]},{name: 'GROWTH', values:[1,]},{name: 'Professionalism', values:[2,]},{name: 'ACCESSIBLE', values:[2,]},
+  {name: 'Open space area', values:[4,]},{name: '2 Phone booth', values:[4,]},],[{name: 'IMPACT', values:[1,]},{name: 'INSPIRE', values:[1,]},
+  {name: 'VALUE CREATION', values:[2,]},{name: '24 seats', values:[4,]},{name: 'Team bonding area', values:[4,]},{name: 'Kitchen ', values:[4,]},],
+  [{name: 'FINTECH', values:[3,]},{name: '', values:[,]},{name: 'SPECIALLY', values:[2,]},{name: 'Break room', values:[4,]},{name: '2 MEETING ROOM ', values:[4,]},{name: 'Common area', values:[4,]},],
+  [{name: 'EMPLOYEES', values:[3,]},{name: 'IDEATHON', values:[3,]},{name: 'HACKATHON', values:[3,]},{name: '', values:[,]},{name: 'control room ', values:[4,]},{name: 'User experience', values:[4,]},],
+  [{name: 'PUBLIC', values:[3,]},{name: 'THIRD PARTY', values:[3,]},{name: 'EDUCATION', values:[5,]},{name: 'MARKETING', values:[5,]},{name: 'Outsourcing team', values:[6,]},{name: ' Teams of bank', values:[6,]},],
+  [{name: 'Innovative mindsets', values:[3,]},{name: 'EDUCATION', values:[3,]},{name: 'PROBLEMS', values:[5,]},{name: 'STUDENTS', values:[6,]},{name: 'Research team', values:[6,]},{name: '', values:[,]},]
+   ]
     );
   const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
   const [isClicked, setIsClicked] = useState(false);
@@ -118,11 +86,14 @@ function App() {
   const [isOpen, setOpen] = useState(false);
 
   const tetrisShapes = [
-    [1,1,1,1,1,1,3,3,],
-    [1,1,1,1,1,3,3,3,],
-    [1,1,1,2,2,3,3,4,],
-    [1,1,2,2,2,3,4,4,],
-    [1,2,2,2,2,3,4,4,],
+    [1,1,2,2,2,2],
+    [1,1,2,2,4,4],
+    [1,1,2,2,4,4],
+    [1,1,2,4,4,4],
+    [3,3,2,4,4,4],
+    [3,3,3,5,4,4],
+    [3,3,5,5,6,6],
+    [3,3,5,6,6,6]
   ];
 
   const containerClassNames1 = [
@@ -150,8 +121,8 @@ function App() {
   }, []);
 
   const generateElements = () => {
-    return Array.from({ length: 5 }).map((item, el) => {
-      return Array.from({ length: 8 }).map((item1, el1) => {
+    return Array.from({ length: 8 }).map((item, el) => {
+      return Array.from({ length: 6 }).map((item1, el1) => {
         let containerClassName = containerClassNames[tetrisShapes[el][el1]];
 
         return (
@@ -171,78 +142,78 @@ function App() {
                   ? {
                       boxShadow:
                         "rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em",
-                      width: (windowSize.width * 0.85) / 8,
-                      height: windowSize.height / 5,
+                      width: (windowSize.width ) / 6,
+                      height: windowSize.height / 8,
                     }
                   : {
-                      width: (windowSize.width * 0.85) / 8,
-                      height: windowSize.height / 5,
+                      width: (windowSize.width ) / 6,
+                      height: windowSize.height / 8,
                       filter: "brightness(20%)",
                     }
                 : {
-                    width: (windowSize.width * 0.85) / 8,
-                    height: windowSize.height / 5,
+                    width: (windowSize.width ) / 6,
+                    height: windowSize.height / 8,
                   }
             }
             onClick={handleClick}
           >
-            {el == 1 && el1 == 1 ? (
+            {el == 0 && el1 == 0 ? (
               <Text
                 fontSize="4xl"
                 className={styles.texttitle}
                 style={
                   showall || lastClicked === "tetrisShape9"
                     ? {
-                        opacity: 0,
-                        marginTop: "20vh",
+                         
+                        marginTop: "10vh",
                         // marginTop: "10px",
                       }
-                    : { marginTop: "20vh" }
+                    : { marginTop: "10vh" }
                 }
               >
-                ML Model
+                VISION
               </Text>
             ) : (
               ""
             )}
-            {/* {el == 0 && el1 == 5 ? (
+            {el == 1 && el1 == 4 ? (
               <Text
                 fontSize="3xl"
                 className={styles.texttitle}
                 style={
                   showall || lastClicked === "tetrisShape6"
                     ? {
-                        opacity: 0,
-                        marginTop: "5vh",
-                        marginLeft: "10vw",
-                        // marginTop: "10px",
+                         
+                       
+                        // marginLeft: "10vw",
+                        marginTop: "14vh",
                       }
-                    : { marginTop: "5vh", marginLeft: "10vw" }
+                    : { marginTop: "14vh"}
                 }
               >
-                {"Scoring".toUpperCase()}
+                {"OFFICE AREA".toUpperCase()}
               </Text>
             ) : (
               ""
-            )} */}
-            {/* {el == 3 && el1 == 1 ? (
+            )}
+            {el == 1 && el1 == 3 ? (
               <Text
-                fontSize="2xl"
+                fontSize="3xl"
                 className={styles.texttitle}
                 style={
                   showall || lastClicked == "tetrisShape2"
                     ? {
-                        opacity: 0,
-                        marginBottom: "19vh",
+                         
+                       
                       }
-                    : { marginBottom: "19vh" }
+                    : {  }
                 }
               >
-                CUSTOMER
+                VALUE
               </Text>
             ) : (
               ""
-            )} */}
+            )}
             {/* {el == 4 && el1 == 2 ? (
               <Text
                 fontSize="2xl"
@@ -250,7 +221,7 @@ function App() {
                 style={
                   showall || lastClicked == "tetrisShape8"
                     ? {
-                        opacity: 0,
+                         
                         marginBottom: "20vh",
                       }
                     : { marginBottom: "20vh" }
@@ -268,7 +239,7 @@ function App() {
                 style={
                   showall || lastClicked == "tetrisShape7"
                     ? {
-                        opacity: 0,
+                         
                         marginLeft: "10vw",
                       }
                     : { marginLeft: "10vw" }
@@ -279,79 +250,61 @@ function App() {
             ) : (
               ""
             )} */}
-            {el == 1 && el1 == 6 ? (
+            {el == 4 && el1 == 1 ? (
               <Text
                 fontSize="4xl"
                 className={styles.texttitle}
                 style={
                   showall || lastClicked == "tetrisShape3"
                     ? {
-                        opacity: 0,
-                        marginLeft: "10vw",
+                         
+                        marginRight: "5vw",
                       }
-                    : { marginLeft: "10vw" }
+                    : { marginRight: "5vw" }
                 }
               >
-                {"Data Engineering"}
+                {"MISSION"}
               </Text>
             ) : (
               ""
             )}
-            {el == 3 && el1 == 3 ? (
+            {el == 5 && el1 == 3 ? (
               <Text
                 fontSize="4xl"
                 className={styles.texttitle}
                 style={
                   showall || lastClicked == "tetrisShape4"
                     ? {
-                        opacity: 0,
-                        marginLeft: "8vw",
+                         
+                        
                       }
-                    : { marginLeft: "8vw" }
+                    : { }
                 }
               >
-                {"Research and Analysis"}
+                {"SOLUTION"}
               </Text>
             ) : (
               ""
             )}
-            {el == 3 && el1 == 6 ? (
-              <Text
-                fontSize="4xl"
-                className={styles.texttitle}
-                style={
-                  showall || lastClicked == "tetrisShape1"
-                    ? {
-                        opacity: 0,
-                        marginTop: "20vh",
-                      }
-                    : { marginTop: "20vh" }
-                }
-              >
-                {"ML Ops"}
-              </Text>
-            ) : (
-              ""
-            )}
-            {/* {el == 1 && el1 == 7 ? (
+            
+            {el == 7 && el1 == 5 ? (
               <Text
                 fontSize="4xl"
                 className={styles.texttitle}
                 style={
                   showall || lastClicked == "tetrisShape5"
                     ? {
-                        opacity: 0,
-                        marginLeft: "10vw",
-                        marginBottom: "14vh",
+                         
+                        marginLeft: "2vw"
                       }
-                    : { marginLeft: "10vw", marginBottom: "14vh" }
+                    : { marginLeft: "2vw" }
                 }
               >
-                {"Product".toUpperCase()}
+                {"PEOPLE".toUpperCase()}
               </Text>
             ) : (
               ""
-            )} */}
+            )}
 
             <Text
               style={showall ? { color: "white" } : {}}
@@ -484,21 +437,21 @@ function App() {
         onClick={onOpen}
         className={styles.btnn}
       >
-        Ð¥Ð°ÑÑÑÐ»Ð°Ñ
+        Харуулах
       </IconButton>
 
       <div
-        style={{ width: windowSize.width * 0.85, height: windowSize.height }}
+        style={{ width: windowSize.width , height: windowSize.height }}
         className={styles.container}
       >
         {generateElements()}
       </div>
-      <div
+      {/* <div
         className={styles.categorys}
         style={{ width: windowSize.width * 0.15, height: windowSize.height }}
       >
-        {generateButton()}
-      </div>
+         {generateButton()} 
+      </div> */}
 
       <Drawer
         isOpen={isOpen}
@@ -509,7 +462,7 @@ function App() {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
-          <DrawerHeader>Ð¦ÑÑ</DrawerHeader>
+          <DrawerHeader>Цэс</DrawerHeader>
 
           <DrawerBody>
             <Stack spacing={4}>
@@ -521,7 +474,7 @@ function App() {
                 colorScheme="green"
                 variant="solid"
               >
-                ÐÒ¯Ð³Ð´Ð¸Ð¹Ð³ ÑÐ°ÑÑÑÐ»Ð°Ñ
+                Бүгдийг харуулах
               </Button>
               <Button
                 leftIcon={<RepeatIcon />}
@@ -531,16 +484,16 @@ function App() {
                 colorScheme="pink"
                 variant="solid"
               >
-                ÐÒ¯Ñ ÑÐ¾Ð½Ð³Ð¾Ð»ÑÑÐ³ Ð°ÑÐ¸Ð»Ð³Ð°Ñ
+                Бүх сонголтыг арилгах
               </Button>
             </Stack>
           </DrawerBody>
 
           <DrawerFooter>
             <Button variant="outline" mr={3} onClick={onCloseD}>
-              ÐÐ¾Ð»Ð¸Ñ
+              Болих
             </Button>
-            <Button colorScheme="blue">ÐÑÑÑÐ»Ð°Ñ</Button>
+            <Button colorScheme="blue">Оруулах</Button>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>
